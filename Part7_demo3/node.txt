@@ -1,0 +1,6 @@
+SHOW TABLES;
+SHOW COLUMNS FROM employee;
+
+INSERT INTO employee(id, name, email, phone) VALUES (1, 'nam' , 'djah@emial', 125478);
+INSERT INTO employee(id, name, email, phone) VALUES (2, 'hue' , 'dfdsf@emial', 45657688);
+SHOW COLUMNS FROM employee;
