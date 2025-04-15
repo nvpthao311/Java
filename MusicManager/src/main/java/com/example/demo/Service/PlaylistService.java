@@ -2,11 +2,13 @@ package com.example.demo.Service;
 
 import com.example.demo.Exception.NotFoundException;
 import com.example.demo.Model.Playlist;
+import com.example.demo.Model.Song;
 import com.example.demo.Repository.PlaylistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class PlaylistService {
@@ -43,5 +45,7 @@ public class PlaylistService {
     public void deletePlaylist(Long id){
         playlistRepository.deleteById(id);
     }
+
+
 
 }

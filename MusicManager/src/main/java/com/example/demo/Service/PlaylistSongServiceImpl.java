@@ -9,6 +9,7 @@ import com.example.demo.Repository.PlaylistRepository;
 import com.example.demo.Repository.PlaylistSongRepository;
 import com.example.demo.Repository.SongRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,13 +17,16 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
-@Transactional
 public class PlaylistSongServiceImpl implements PlaylistSongService {
 
-    private final PlaylistRepository playlistRepository;
-    private final SongRepository songRepository;
-    private final PlaylistSongRepository playlistSongRepository;
+    @Autowired
+    private PlaylistRepository playlistRepository;
+
+    @Autowired
+    private SongRepository songRepository;
+
+    @Autowired
+    private PlaylistSongRepository playlistSongRepository;
 
     @Override
     public PlaylistSong addSongToPlaylist(Long playlistId, Long songId) {
@@ -40,6 +44,7 @@ public class PlaylistSongServiceImpl implements PlaylistSongService {
         }
 
         PlaylistSong ps = new PlaylistSong(playlist, song);
+
         return playlistSongRepository.save(ps);
     }
 
@@ -54,22 +59,12 @@ public class PlaylistSongServiceImpl implements PlaylistSongService {
 
     @Override
     public Set<Song> getSongsByPlaylist(Long playlistId) {
-        Playlist playlist = playlistRepository.findById(playlistId)
-                .orElseThrow(() -> new NotFoundException(playlistId, "Playlist"));
-
-        return playlist.getPlaylistSongs().stream()
-                .map(PlaylistSong::getSong)
-                .collect(Collectors.toSet());
+        return playlistSongRepository.findSongsByPlaylistId(playlistId);
     }
 
     @Override
     public Set<Playlist> getPlaylistsBySong(Long songId) {
-        Song song = songRepository.findById(songId)
-                .orElseThrow(() -> new NotFoundException(songId, "Song"));
-
-        return song.getPlaylistSongs().stream()
-                .map(PlaylistSong::getPlaylist)
-                .collect(Collectors.toSet());
+        return playlistSongRepository.findPlaylistsBySongId(songId);
     }
 }
 

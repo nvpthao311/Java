@@ -31,5 +31,6 @@ public class PlaylistSong {
         this.song = song;
         this.id = new PlaylistSongId(playlist.getId(), song.getId());
     }
+
 }
 

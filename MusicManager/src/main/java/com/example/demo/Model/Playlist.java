@@ -22,7 +22,7 @@ public class Playlist {
     @Column(nullable = false, unique = true)
     private String name;
 
-    @OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<PlaylistSong> playlistSongs = new HashSet<>();
 
     //

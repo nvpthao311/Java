@@ -30,7 +30,7 @@ public class Song {
     @Column(nullable = false, unique = true)
     private String filePath;
 
-    @OneToMany(mappedBy = "song", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "song", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @JsonIgnore
     private Set<PlaylistSong> playlistSongs = new HashSet<>();
 

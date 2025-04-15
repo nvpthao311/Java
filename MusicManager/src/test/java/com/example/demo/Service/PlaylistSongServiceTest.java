@@ -19,57 +19,84 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.ANY)
 @Transactional
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE) // nếu dùng MySQL thật
 class PlaylistSongServiceTest {
+
     @Autowired
     private PlaylistSongService playlistSongService;
+
     @Autowired
     private PlaylistRepository playlistRepository;
+
     @Autowired
     private SongRepository songRepository;
+
     @Autowired
     private PlaylistSongRepository playlistSongRepository;
 
-    private Playlist playlist;
-    private Song song;
+    private Playlist p1, p2;
+    private Song s1, s2, s3, s4, s5, s6;
 
     @BeforeEach
     void setup() {
-        playlist = playlistRepository.save(new Playlist("My Playlist"));
-        song = songRepository.save(new Song("Bohemian Rhapsody", "Queen", "Rock", "/music/queen.mp3"));
+
+        p1 = playlistRepository.save(new Playlist("list1"));
+        p2 = playlistRepository.save(new Playlist("list2"));
+
+        s1 = songRepository.save(new Song("what do you mean", "Justin", "pop", "uploads/song1.mp3"));
+        s2 = songRepository.save(new Song("Timber","PitBull",null,"uploads/song2.mp3"));
+        s3 = songRepository.save(new Song("Hello","Adel", null, "uploads/song3.mp3"));
+        s4 = songRepository.save(new Song("lock what you made me do","Taylor", null, "uploads/song4.mp3"));
+        s5 = songRepository.save(new Song("Hot N Cold", "Katty",null, "uploads/song5.mp3"));
+        s6 = songRepository.save(new Song("Hello", "SHINee", null, "uploads/song6.mp3"));
+
     }
 
     @Test
     void testAddSongToPlaylist() {
-        PlaylistSong ps = playlistSongService.addSongToPlaylist(playlist.getId(), song.getId());
+        PlaylistSong ps = playlistSongService.addSongToPlaylist(p1.getId(), s3.getId());
 
         assertNotNull(ps);
-        assertEquals(playlist.getId(), ps.getPlaylist().getId());
-        assertEquals(song.getId(), ps.getSong().getId());
+        assertEquals(p1.getId(), ps.getPlaylist().getId());
+        assertEquals(s3.getId(), ps.getSong().getId());
 
         // Kiểm tra tồn tại trong DB
-        assertTrue(playlistSongRepository.existsById(new PlaylistSongId(playlist.getId(), song.getId())));
-    }
-
-    @Test
-    void testGetSongsByPlaylist() {
-        playlistSongService.addSongToPlaylist(playlist.getId(), song.getId());
-
-        Set<Song> songs = playlistSongService.getSongsByPlaylist(playlist.getId());
-
-        assertEquals(1, songs.size());
-        assertTrue(songs.stream().anyMatch(s -> s.getId().equals(song.getId())));
+        assertTrue(playlistSongRepository.existsById(new PlaylistSongId(p1.getId(), s3.getId())));
     }
 
     @Test
     void testRemoveSongFromPlaylist() {
-        playlistSongService.addSongToPlaylist(playlist.getId(), song.getId());
+        playlistSongService.addSongToPlaylist(p2.getId(), s5.getId());
+        assertTrue(playlistSongRepository.existsById(new PlaylistSongId(p2.getId(), s5.getId())));
 
-        playlistSongService.removeSongFromPlaylist(playlist.getId(), song.getId());
-
-        assertFalse(playlistSongRepository.existsById(new PlaylistSongId(playlist.getId(), song.getId())));
+        playlistSongService.removeSongFromPlaylist(p2.getId(), s5.getId());
+        assertFalse(playlistSongRepository.existsById(new PlaylistSongId(p2.getId(), s5.getId())));
     }
+
+    @Test
+    @Transactional
+    void testGetSongsByPlaylist() {
+        playlistSongService.addSongToPlaylist(p1.getId(), s2.getId());
+        assertTrue(playlistSongRepository.existsById(new PlaylistSongId(p1.getId(), s2.getId())));
+
+        Set<Song> songs = playlistSongService.getSongsByPlaylist(p1.getId());
+
+        assertEquals(1, songs.size());
+        assertTrue(songs.stream().anyMatch(s -> s.getId().equals(2L)));
+    }
+
+    @Test
+    void testGetPlaylistsBySong() {
+        playlistSongService.addSongToPlaylist(p2.getId(), s3.getId());
+        playlistSongService.addSongToPlaylist((p1.getId()), s3.getId());
+
+        Set<Playlist> playlists = playlistSongService.getPlaylistsBySong(s3.getId());
+
+        assertEquals(2, playlists.size());
+    }
+
+
 
 
 }

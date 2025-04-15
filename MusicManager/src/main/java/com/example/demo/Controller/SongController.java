@@ -20,7 +20,7 @@ public class SongController {
         return songService.findById(id);
     }
 
-    @GetMapping("/{name}")
+    @GetMapping("name/{name}")
     public List<Song> findByName(@PathVariable String name){
         return songService.findByName(name);
     }
