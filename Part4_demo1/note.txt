@@ -1,2 +1,0 @@
-1. đọc file và lấy các giá trị đó gán cho đối tượng merchandise
-2.
