@@ -27,6 +27,20 @@ public class JwtFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
+        //Bỏ qua filter nếu request là swagger hoặc auth
+        String path = request.getRequestURI();
+        System.out.println("Request path: " + path);
+
+        if (path.startsWith("/auth") ||
+                path.startsWith("/v3/api-docs") ||
+                path.startsWith("/swagger-ui") ||
+                path.startsWith("/h2-console")) {
+
+            System.out.println("Bypassed JwtFilter for path: " + path);
+            filterChain.doFilter(request, response);
+            return;
+        }
+
         //Lấy token từ header
         String authHeader = request.getHeader("Authorization");
 

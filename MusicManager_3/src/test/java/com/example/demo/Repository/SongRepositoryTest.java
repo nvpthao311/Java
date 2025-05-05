@@ -21,7 +21,6 @@ class SongRepositoryTest {
 
     @BeforeEach
     void setup() {
-
         s1 = new Song("what do you mean", "Justin", "pop", "uploads/song1.mp3");
         s2 = new Song("Timber","PitBull",null,"uploads/song2.mp3");
         s3 = new Song("Hello","Adel", null, "uploads/song3.mp3");
@@ -30,6 +29,7 @@ class SongRepositoryTest {
         s6 = new Song("Hello", "SHINee", null, "uploads/song6.mp3");
 
         songRepository.saveAll(Set.of(s1, s2, s3, s4, s5, s6));
+
     }
 
     @Test
@@ -37,5 +37,6 @@ class SongRepositoryTest {
         List<Song> songs = songRepository.findByName("Hello");
 
         assertEquals(2, songs.size());
+
     }
 }
