@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61165f5c-4b82-4970-b218-3ed61e56d249" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../MusicManager_3.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../MusicManager_3.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Controller/PlaylistController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Controller/PlaylistSongController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Controller/SongController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Controller/TestProtectedController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Exception/GlobalExceptionHanlder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Model/Playlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Model/PlaylistSong.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Model/PlaylistSongId.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Model/Song.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Repository/PlaylistRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Repository/PlaylistSongRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Repository/SongRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Security/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Security/Jwt/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Security/Jwt/JwtResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Security/Jwt/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Security/Jwt/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Security/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Service/PlaylistService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Service/PlaylistSongService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Service/PlaylistSongServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Service/SongService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Service/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/OpenApiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-1.0-create-songs-playlists.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-1.1-create-user.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Controller/PlaylistControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Controller/PlaylistSongControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Controller/SongControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Repository/PlaylistRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Repository/SongRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Repository/UserRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Security/JwtTestConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Security/SecurityTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Security/TestSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Service/PlaylistServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Service/PlaylistSongServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/Service/SongServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/song1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/song2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src_0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src_1.zip" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2vnAmH1qtoiZB7PRuDp7trV2gQd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DemoApplication.executor": "Run",
+    "JUnit.PlaylistControllerTest.executor": "Run",
+    "JUnit.PlaylistRepositoryTest.executor": "Run",
+    "JUnit.PlaylistRepositoryTest.findByName.executor": "Run",
+    "JUnit.PlaylistServiceTest.executor": "Run",
+    "JUnit.PlaylistSongControllerTest.executor": "Run",
+    "JUnit.PlaylistSongServiceTest.executor": "Run",
+    "JUnit.PlaylistSongServiceTest.testAddSongToPlaylist.executor": "Run",
+    "JUnit.SecurityTest.executor": "Run",
+    "JUnit.SongControllerTest.executor": "Run",
+    "JUnit.SongRepositoryTest.executor": "Run",
+    "JUnit.SongRepositoryTest.findByName.executor": "Run",
+    "JUnit.SongServiceTest.executor": "Run",
+    "JUnit.UserRepositoryTest.executor": "Run",
+    "JUnit.UserRepositoryTest.testFindByUsername_whenUserExists.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "java",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/For word/MusicManager_3",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\code_java\MusicManager_3\src\main\resources\db\changelog" />
+      <recent name="C:\Users\intern.nvpthao\Documents\MusicManager\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DemoApplication">
+    <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.DemoApplication" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistSongServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.Service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.Service" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.Service.PlaylistSongServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.Controller" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.Controller.SongControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.Repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.Repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.Repository.SongRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongRepositoryTest.findByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.Repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.Repository" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.Repository.SongRepositoryTest" />
+      <option name="METHOD_NAME" value="findByName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DemoApplication" />
+        <item itemvalue="JUnit.SongRepositoryTest" />
+        <item itemvalue="JUnit.SongRepositoryTest.findByName" />
+        <item itemvalue="JUnit.PlaylistSongServiceTest" />
+        <item itemvalue="JUnit.SongControllerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61165f5c-4b82-4970-b218-3ed61e56d249" name="Changes" comment="" />
+      <created>1744770622922</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744770622922</updated>
+    </task>
+    <servers />
+  </component>
+</project>
